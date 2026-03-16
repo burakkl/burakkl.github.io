@@ -274,12 +274,12 @@
     <div class="contact-inner reveal">
       <p class="contact-intro">Open to conversations, collaboration, or new opportunities. Feel free to reach out.</p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#bad8cfc8dbd194d1d3d6d3d9facfdd94d8d3d6d1dfd4ce94dfdecf94cec8" class="contact-link">
+        <a href="#" id="email-link" class="contact-link">
           <div class="contact-link-left">
             <div class="contact-icon">✉</div>
             <div>
               <div class="cl-label">Email</div>
-              <div class="cl-val"><span class="__cf_email__" data-cfemail="04667176656f2a6f6d686d674471632a666d686f616a702a6160712a7076">[email&#160;protected]</span></div>
+              <div class="cl-val" id="email-val"></div>
             </div>
           </div>
           <span class="cl-arrow">↗</span>
@@ -313,7 +313,13 @@
     <span>Ankara, Turkey</span>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
+    const u = 'burak.kilic';
+    const d = 'ug.bilkent.edu.tr';
+    const email = u + '@' + d;
+    document.getElementById('email-val').textContent = email;
+    document.getElementById('email-link').href = 'mailto:' + email;
+
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 40);
